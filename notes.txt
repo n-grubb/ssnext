@@ -1,0 +1,22 @@
+myleague endpoint: https://fantasy.espn.com/apis/v3/games/flb/seasons/2021/segments/0/leagues/3850
+
+// use the network tab to observe the endpoints
+
+// other reading
+https://github.com/mkreiser/ESPN-Fantasy-Football-API
+https://stmorse.github.io/journal/espn-fantasy-v3.html
+http://espn-fantasy-football-api.s3-website.us-east-2.amazonaws.com/Client.html
+
+
+workflow: enter your league id for a public league
+use the endpoint to build teams in a league
+get all player stats thus far
+matchup data
+use the endpoint to get a list of free agents
+
+
+what does this allow me to do? 
+run analysis on the matchups
+build a longer watchlist - notifications? 
+hot matchups 
+plan txs for the week

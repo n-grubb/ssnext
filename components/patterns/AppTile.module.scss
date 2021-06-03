@@ -1,0 +1,51 @@
+.tile {
+  width: 45%;
+  max-width: 100%;
+  min-width: 20rem;
+  padding: 1rem;
+  border: 1px solid var(--neutral-lighter);
+  border-radius: var(--border-radius-heavy);
+  background-color: var(--white);
+  box-shadow: var(--box-shadow-md);
+  cursor: pointer;
+  display: grid;
+  grid-template: auto auto / auto auto;
+  
+  &:hover,
+  &:focus {
+    border-color: var(--green-400);
+  }
+
+  &:active {
+    box-shadow: var(--box-shadow-sm);
+  }
+
+  .icon {
+    grid-row: 1 / span 2;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+    border-radius: var(--border-radius-light);
+    color: var(--white);
+    font-size: var(--text-xl);
+    font-weight: var(--font-semi);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+  }
+
+  p {
+    width: 100%;
+    margin: 0;
+    color: var(--black);
+    font-size: var(--text-sm);
+    line-height: var(--leading-tight);
+  }
+}

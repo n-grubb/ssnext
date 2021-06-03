@@ -1,0 +1,187 @@
+/* Themable CSS props listed here */
+:root {
+  /**
+   * Base Size
+   * This gets set as the root font-size. 
+   * Since we utilize the rem unit heavily, almost all calculations will be based off this value. 
+   */
+  --base-size: 16px;
+
+  /**
+   * Harmonic Size Scale
+   * My version has fixed lower sizing with a harmonic scale on values above the base size.
+   * This prevents workign with strange values like 5.0625px.
+   * --s can stand for size, scale, or space. Whatever floats your boat.
+   * @see https://every-layout.dev/rudiments/modular-scale/
+   */
+  --ratio: 1.5;
+  --s-xxxs: calc(var(--s) * .125);
+  --s-xxs: .25rem;
+  --s-xs: .5rem;
+  --s-sm: .75rem; 
+  --s: 1rem;
+  --s-lg: calc(var(--s) * var(--ratio));
+  --s-xl: calc(var(--s-lg) * var(--ratio));
+  --s-xxl: calc(var(--s-xl) * var(--ratio));
+  --s-xxxl: calc(var(--s-xxl) * var(--ratio));
+
+  /* Define a minimum tap area to be used to ensure interactive elements are adequately sized for tap controls */
+  --min-tap-area: 48px;
+
+  /**
+   * Color Definitions
+   */
+
+  /* Primary Color */ 
+  --primary-900: hsl(43, 77%, 27%);
+  --primary-800: hsl(43, 72%, 37%);
+  --primary-700: hsl(42, 63%, 48%);
+  --primary-600: hsl(42, 78%, 60%);
+  --primary: hsl(43, 89%, 70%);
+  --primary-400: hsl(43, 90%, 76%);
+  --primary-300: hsl(45, 86%, 81%);
+  --primary-200: hsl(45, 90%, 88%);
+  --primary-100: hsl(45, 100%, 96%);
+
+  /* Neutral Colors */
+  --white: #fff;
+  --cool-white: #f8fafc;
+  --neutral-lighter: #e2e8f0;
+  --neutral-light: #cbd5e1;
+  --neutral: #94a3b8;
+  --neutral-dark: #64748b;
+  --neutral-darker: #334155;
+  --cool-black: #0f172a;
+  --black: #000;
+
+  /* Supporting Colors */
+  --red-900: hsl(348, 94%, 20%);
+  --red-800: hsl(350, 94%, 28%);
+  --red-700: hsl(352, 90%, 35%);
+  --red-600: hsl(354, 85%, 44%);
+  --red: hsl(356, 75%, 53%);
+  --red-400: hsl(360, 83%, 62%);
+  --red-300: hsl(360, 91%, 69%);
+  --red-200: hsl(360, 100%, 87%);
+  --red-100: hsl(360, 100%, 95%);
+
+  --green-900: hsl(125, 86%, 14%);
+  --green-800: hsl(125, 73%, 20%);
+  --green-700: hsl(125, 56%, 29%);
+  --green-600: hsl(122, 47%, 35%);
+  --green: hsl(122, 39%, 41%);
+  --green-400: hsl(123, 35%, 51%);
+  --green-300: hsl(123, 38%, 63%);
+  --green-200: hsl(126, 49%, 84%);
+  --green-100: hsl(125, 65%, 93%);
+
+  --orange-900: hsl(6, 96%, 26%);
+  --orange-800: hsl(8, 92%, 35%);
+  --orange-700: hsl(10, 93%, 40%);
+  --orange-600: hsl(12, 86%, 47%);
+  --orange: hsl(14, 89%, 55%);
+  --orange-400: hsl(16, 94%, 61%);
+  --orange-300: hsl(18, 100%, 70%);
+  --orange-200: hsl(22, 100%, 85%);
+  --orange-100: hsl(24, 100%, 93%);
+
+  --blue-900: hsl(205, 100%, 21%);
+  --blue-800: hsl(205, 87%, 29%);
+  --blue-700: hsl(205, 82%, 33%);
+  --blue-600: hsl(205, 76%, 39%);
+  --blue: hsl(205, 67%, 45%);
+  --blue-400: hsl(205, 65%, 55%);
+  --blue-300: hsl(205, 84%, 74%);
+  --blue-200: hsl(205, 97%, 85%);
+  --blue-100: hsl(205, 79%, 92%);
+
+
+  /* Theme color settings */
+  --primary: var(--cool-black);
+  --secondary: var(--white);
+  --accent: var(--emerald);
+  --site-bg: var(--cool-white);
+  --focus-color: var(--lightblue);
+  --input-hover: var(--neutral-lighter);
+
+
+  /**
+   * Font Definitions
+   */
+
+  /* Font Families */
+  --sans: SF Pro Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --serif: serif;
+
+  /* Global Text Color */
+  --text-color: var(--primary);
+  --text-color-light: var(--neutral-dark);
+  --text-color-lighter: var(--neutral-light);
+
+  /* Text Sizing */
+  --text-xs: .75em;
+  --text-sm: .875em;
+  --text-md: 1em;
+  --text-lg: 1.25em;
+  --text-xl: 1.5em;
+  --text-xxl: 2em;
+
+  /* Font Weights */
+  --font-lighter: 300;
+  --font-light: 400;
+  --font-medium: 500;
+  --font-semi: 600;
+  --font-bold: 700;
+
+  /* Line Height / Leading */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-loose: 2;
+
+  /**
+   * Global Border Settings
+   */
+  --border-color-light: var(--neutral-lighter);
+  --border-color-medium: var(--neutral-light);
+  --border-color-dark: var(--neutral-dark);
+
+  --border-thickness-light: var(--s-xxxs);
+  --border-thickness-medium: var(--s-xxs);
+  --border-thickness-heavy: var(--s-xs);
+
+  --border-radius-light: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-heavy: 8px;
+  --border-radius-rounded: 50%;
+
+  --border-light: var(--border-thickness-light) solid var(--border-color-light);
+  --border-medium: var(--border-thickness-medium) solid var(--border-color-medium);
+
+  /**
+   * Box Shadow Options
+   */
+  /* --shadow-color: rgba(var(--cool-black), .15); */
+  --box-shadow-sm: 0 var(--s-xxs) var(--s-xxs) var(--shadow-color, rgba(0,0,0,.15));
+  --box-shadow-md: 0 var(--s-xs) var(--s-xs) var(--shadow-color, rgba(0,0,0,.15));
+  --box-shadow-lg: 0 var(--s-sm) var(--s-sm) var(--shadow-color, rgba(0,0,0,.15));
+
+  /**
+   * Link Options
+   */
+  --link-color: var(--accent);
+  /* --link-font-weight */
+  /* --link-text-decoration */
+}
+
+
+
+
+
+
+
+
+
+
+
+

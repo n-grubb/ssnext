@@ -1,0 +1,31 @@
+@import 'theme.css';
+@import 'resets.css';
+@import 'utils.css';
+
+html {
+  background: var(--site-bg);
+}
+
+body {
+  color: var(--text-color);
+  font-family: var(--sans);
+  font-size: var(--base-size, 16px);
+  font-weight: var(--font-lighter);
+  letter-spacing: .0125em;
+}
+
+.app-header {
+  padding: var(--s);
+  margin-bottom: var(--s);
+}
+
+.app-title {
+  color: var(--neutral-dark);
+	font-size: var(--text-lg);
+  text-decoration: none;
+}
+
+main {
+  min-width: 100vw;
+  padding: var(--s);
+}

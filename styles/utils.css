@@ -1,0 +1,41 @@
+/* A11y Utils */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+/* Print Utilities */
+
+/* 
+ * Removes the browser default of displaying title, url, date and page number in the header and footer
+ * of the printed page.
+ * Unfortunately, Safari does not support this out of the box (power users can enable it).
+ * Users will need to select the "No Headers & Footers" print option in Safari to achieve the same effect.
+ */
+@page {
+  size: auto;
+  margin: 0;
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  .print-only {
+    display: inherit;
+  }
+
+  .not-for-print {
+    display: none;
+  }
+}
+
