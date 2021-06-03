@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Image from 'next/image'
+import styles from './Select.module.scss'
 
 type Option = {
   label: string,
@@ -6,11 +8,11 @@ type Option = {
 }
 
 interface SelectOptions {
-  title: string
-  id: string
-  name: string
+  title?: string
+  id?: string
+  name?: string
   options: Option[]
-  defaultOption: Option
+  defaultOption?: Option
   selected: string
   ariaLabel?: string
 }
@@ -32,17 +34,17 @@ const Select = (props: SelectOptions) => {
   const selectOption = () => {}
 
   return (
-    <div className="select-wrapper">
+    <div className={styles.selectWrapper}>
       { props.title && 
         <label htmlFor={props.id}>
           { props.title }
         </label>
       }
-      <div className="select">
+      <div className={styles.select}>
         <select 
           id={props.id}
           name={props.name}
-          aria-label={ props.ariaLabel || `Select an option ${props.name && 'for ' + props.name}`}
+          aria-label={ props.ariaLabel || `Select an option ${props.name ? ' for ' + props.name : ''}`}
           data-open={open}
           onClick={() => setOpen(true)}
           onChange={()=> selectOption()}
@@ -57,20 +59,12 @@ const Select = (props: SelectOptions) => {
           }
           { selectOptions }
         </select>
-        <span className={`caret ${open && 'caret-up'}`}>
-
+        <span className={`${styles.caret} ${open ? styles.caretUp : ''}`}>
+          <Image src="/icons/cheveron-down.svg" alt="An icon of a chevron" width="16" height="16" />
         </span>
     </div>
   </div>
   )
 }
-
-
-/*
-  todo: import icon
-  <span :class="['caret', { 'caret-up': open }]" >
-    <IconAngleDown />
-  </span>
-*/
 
 export default Select 

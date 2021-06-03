@@ -1,0 +1,58 @@
+.selectWrapper {
+  display: inline-block;
+  
+  label {
+    display: block;
+    margin-bottom: var(--s-xxs);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semi);
+  }
+}
+
+.select {
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: var(--white);
+
+  select {
+    appearance: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: var(--s-xs);
+    padding-right: calc(var(--s) * 3);
+    border: 1px solid var(--neutral-light);
+    border-radius: var(--border-radius-medium);
+    margin: 0;
+    background-color: transparent;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.15);
+    text-align: left;
+    z-index: 2;
+  }
+}
+
+.caret {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 2rem;
+  height: 100%;
+  border-left: 1px solid var(--neutral-light);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-top: .25rem;
+    transition: transform .2s;
+  }
+
+  &.caretUp svg {
+    transform: rotate(-180deg);
+  }
+}

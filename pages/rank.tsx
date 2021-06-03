@@ -39,7 +39,7 @@ function Rank() {
               rankings={rankings}
             />
           </div>
-          <div className="player-pane">
+          <div className="player-pane" style={{marginTop: '2rem'}}>
             { rankings.length > 0 ? 
               <p>found a ranking!</p>
             : 
