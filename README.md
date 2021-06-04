@@ -3,6 +3,8 @@ I am currently rewriting [SignStealing](https://github.com/n-grubb/signstealing)
 
 I am switching this project to a React based architecture mostly for fun as I rewrite the code. But also for the stability of the React ecosystem. I ran into some deploy issue in the Vue3 version that I expect to be resolved as I use more battle-tested technologies like Next.
 
+I plan to merge the two repos once the rewrite is complete.
+
 
 ## Getting Started
 
